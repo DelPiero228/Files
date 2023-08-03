@@ -2,7 +2,7 @@ def get_recipes(recipes_file='./recipes.txt'):
     cook_book = {}
     with open(recipes_file, encoding="utf-8") as receipt_file:
         while True:
-            dish = receipt_file.readline().rstrip('\n')
+            dish = receipt_file.readline().rstrip('\n').lower()
             if not dish:
                 break
             cook_book[dish] = []
